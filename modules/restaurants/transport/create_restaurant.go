@@ -1,6 +1,7 @@
 package transport
 
 import (
+	"food-delivery/common"
 	"food-delivery/component"
 	"food-delivery/modules/restaurants/model"
 	"food-delivery/modules/restaurants/restaurantbiz"
@@ -29,6 +30,6 @@ func CreateRestaurant(appContext component.AppContext) gin.HandlerFunc {
 
 			return
 		}
-		context.JSON(200, data)
+		context.JSON(200, common.SimpleSuccessResponse(data))
 	}
 }
